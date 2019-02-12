@@ -71,6 +71,7 @@
     <Compile Include="Assets\Man_Info.cs" />
     <Compile Include="Assets\Money.cs" />
     <Compile Include="Assets\Panel.cs" />
+    <Compile Include="Assets\Proffesions_sc.cs" />
     <Compile Include="Assets\Shop_Button.cs" />
     <Compile Include="Assets\Shop_Sc.cs" />
     <Compile Include="Assets\Start_Chose.cs" />

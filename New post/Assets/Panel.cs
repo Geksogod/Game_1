@@ -9,12 +9,14 @@ public class Panel : MonoBehaviour
     private bool info;
     private bool shop;
     private bool birza;
+    private bool profession;
 
     public GameObject work_panel;
     public GameObject food_panel;
     public GameObject info_panel;
     public GameObject shop_panel;
     public GameObject birza_panel;
+    public GameObject proffesion_panel;
     void Start()
     {
         work = false;
@@ -22,10 +24,20 @@ public class Panel : MonoBehaviour
         info = true;
         shop = false;
         birza = false;
+        profession = false;
+
+        if (info)
+        {
+            work_panel.SetActive(false);
+            food_panel.SetActive(false);
+            info_panel.SetActive(true);
+            shop_panel.SetActive(false);
+            birza_panel.SetActive(false);
+            proffesion_panel.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Turn_on_off()
     {
         if (work)
         {
@@ -34,6 +46,7 @@ public class Panel : MonoBehaviour
             info_panel.SetActive(false);
             shop_panel.SetActive(false);
             birza_panel.SetActive(false);
+            proffesion_panel.SetActive(false);
         }
         else if (food)
         {
@@ -42,6 +55,7 @@ public class Panel : MonoBehaviour
             info_panel.SetActive(false);
             shop_panel.SetActive(false);
             birza_panel.SetActive(false);
+            proffesion_panel.SetActive(false);
         }
         else if (info)
         {
@@ -50,6 +64,7 @@ public class Panel : MonoBehaviour
             info_panel.SetActive(true);
             shop_panel.SetActive(false);
             birza_panel.SetActive(false);
+            proffesion_panel.SetActive(false);
         }
         else if (shop)
         {
@@ -58,6 +73,7 @@ public class Panel : MonoBehaviour
             info_panel.SetActive(false);
             shop_panel.SetActive(true);
             birza_panel.SetActive(false);
+            proffesion_panel.SetActive(false);
         }
         else if (birza)
         {
@@ -66,8 +82,25 @@ public class Panel : MonoBehaviour
             info_panel.SetActive(false);
             shop_panel.SetActive(false);
             birza_panel.SetActive(true);
+            proffesion_panel.SetActive(false);
 
         }
+        else if (profession)
+        {
+            work_panel.SetActive(false);
+            food_panel.SetActive(false);
+            info_panel.SetActive(false);
+            shop_panel.SetActive(false);
+            birza_panel.SetActive(false);
+            proffesion_panel.SetActive(true);
+
+        }
+
+
+    }
+    void Update()
+    {
+        
     }
     public void Work_Click()
     {
@@ -76,6 +109,8 @@ public class Panel : MonoBehaviour
         info = false;
         shop = false;
         birza = false;
+        profession = false;
+        Turn_on_off();
     }
     public void Food_Click()
     {
@@ -84,6 +119,8 @@ public class Panel : MonoBehaviour
         food = true;
         info = false;
         birza = false;
+        profession = false;
+        Turn_on_off();
     }
     public void Info_Click()
     {
@@ -92,6 +129,8 @@ public class Panel : MonoBehaviour
         shop = false;
         info = true;
         birza = false;
+        profession = false;
+        Turn_on_off();
     }
     public void Shop_Click()
     {
@@ -100,6 +139,8 @@ public class Panel : MonoBehaviour
         info = false;
         shop = true;
         birza = false;
+        profession = false;
+        Turn_on_off();
     }
     public void Birza_Click()
     {
@@ -108,5 +149,17 @@ public class Panel : MonoBehaviour
         info = false;
         shop = false;
         birza = true;
+        profession = false;
+        Turn_on_off();
+    }
+    public void Proffesion_Click()
+    {
+        work = false;
+        food = false;
+        info = false;
+        shop = false;
+        birza = false;
+        profession = true;
+        Turn_on_off();
     }
 }
