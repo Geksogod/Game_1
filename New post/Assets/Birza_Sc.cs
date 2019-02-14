@@ -32,7 +32,7 @@ public class Birza_Sc : MonoBehaviour
         else if (chislo_do < Convert.ToInt32(GetComponentsInChildren<Text>()[2].text))
             GetComponentsInChildren<Text>()[2].color = Color.red;
         else            
-            GetComponentsInChildren<Text>()[2].color = Color.gray;
+            GetComponentsInChildren<Text>()[2].color = Color.white;
 
 
         GetComponentsInChildren<Text>()[2].text = chislo_do.ToString();

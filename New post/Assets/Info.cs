@@ -16,6 +16,7 @@ public class Info : MonoBehaviour
     public int iq;
     public int power;
 
+    public GameObject work_info;
     public Sprite avatar;
     public GameObject info_Panel;
     // Start is called before the first frame update
@@ -57,6 +58,7 @@ public class Info : MonoBehaviour
             {
                 GameObject.Find("Info_IQ").GetComponent<Text>().text = "IQ: " + iq;
                 GameObject.Find("Info_Power").GetComponent<Text>().text = "Power: " + power;
+                work_info.GetComponent<Text>().text = "Work: "+work;
             }
         }
         catch
@@ -83,4 +85,6 @@ public class Info : MonoBehaviour
         GameObject.Find("Info_Age").GetComponent<Text>().text = "Age: " + age;
         
     }
+
+    
 }
