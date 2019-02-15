@@ -15,6 +15,7 @@ public class Info : MonoBehaviour
     public string work;
     public int iq;
     public int power;
+    public int salary;
 
     public GameObject work_info;
     public Sprite avatar;

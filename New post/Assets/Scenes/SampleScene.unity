@@ -11048,7 +11048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1096929289
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11086,7 +11086,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finish_value: 1
+  index: 0
+  info: {fileID: 1445011592}
+  work:
+  - 
+  - 
+  - 
+  - 
+  - 
   proff: {fileID: 1742175341}
+  message: {fileID: 946758632}
+  iq_Need: 14000000280000003c000000460000005a000000
+  power_Need: 14000000280000003c000000460000005a000000
 --- !u!1 &1098507043
 GameObject:
   m_ObjectHideFlags: 0
@@ -14943,6 +14954,7 @@ MonoBehaviour:
   work: 
   iq: 0
   power: 0
+  salary: 0
   work_info: {fileID: 827682533}
   avatar: {fileID: 0}
   info_Panel: {fileID: 418621505}
@@ -17684,7 +17696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1742175339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17748,6 +17760,7 @@ MonoBehaviour:
   info: {fileID: 1445011592}
   info_Gm: {fileID: 1445011590}
   proff_work: {fileID: 1096929288}
+  work: {fileID: 1096929290}
   value_: 0
   list_proff:
   - 1
@@ -17806,6 +17819,7 @@ MonoBehaviour:
   - 
   - 
   - 
+  salary: 140000003200000064000000fa000000f4010000
 --- !u!1 &1746389311
 GameObject:
   m_ObjectHideFlags: 0

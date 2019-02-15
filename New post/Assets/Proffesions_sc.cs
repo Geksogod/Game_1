@@ -10,10 +10,11 @@ public class Proffesions_sc : MonoBehaviour
     public Info info;
     public GameObject info_Gm;
     public GameObject proff_work;
+    public Working work;
     public int value_;
-
+    
     public string[] list_proff = new string[8] {"1","2","3","4","5","6","7","8" };
-    public string[] proff_1 = new string[5] { "Тесткер", "Джуниор", "Мидл", "senior", "Тим_Лид"};
+    public string[] proff_1 = new string[5] { "Тестер", "Джуниор", "Мидл", "senior", "Тим_Лид"};
     public string[] proff_2 = new string[5] { "Помощник полицейского", "", "", "", "" };
     public string[] proff_3 = new string[5] { "Помощник медбрата", "", "", "", "" };
     public string[] proff_4 = new string[5] { "Охраник", "", "", "", "" };
@@ -22,9 +23,12 @@ public class Proffesions_sc : MonoBehaviour
     public string[] proff_7 = new string[5] { "Младший юрист", "", "", "", "" };
     public string[] proff_8 = new string[5] { "Библеотекарь", "", "", "", "" };
 
-    
-    
-    
+    public int[] salary = new int[5] { 20, 50, 100, 250, 500 };
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,8 +73,11 @@ public class Proffesions_sc : MonoBehaviour
         if (number == 1)
         {
             info.work = proff_1[value];
+            info.salary = salary[value];
             this.gameObject.SetActive(false);
             proff_work.SetActive(true);
+            work.index = value;
+            work.work = proff_1;
             Debug.Log("dasdsa");
         }
         else if(number == 2)
